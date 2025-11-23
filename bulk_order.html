@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Order - Bhubaneswar Connect</title>
+    <link rel="stylesheet" href="Homstyle.css"> 
+    <link rel="stylesheet" href="features_style.css"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <h1 style="padding: 15px; text-align: center;">📦 Bulk Order Quick Form</h1>
+    </header>
+
+    <main class="feature-page-container">
+        
+        <section class="feature-card bulk-order-card full-width">
+            <h2>Fast SKU Entry</h2>
+            <p>Use SKUs or codes for rapid bulk inventory ordering. MOQ is automatically enforced.</p>
+            
+            <div class="bulk-form">
+                <input type="text" id="bulk-sku" placeholder="Product SKU/Code (e.g., RICE001)">
+                <input type="number" id="bulk-qty" placeholder="Quantity (Must meet MOQ)">
+                <input type="number" id="bulk-price" placeholder="Negotiated Unit Price">
+                <button onclick="addBulkItem()">Add Item to Cart</button>
+            </div>
+
+            <div class="bulk-order-summary">
+                <h3>Order Summary</h3>
+                <ul id="bulk-list">
+                    <li>Cement Bags (50 units) x ₹350.00 = ₹17,500.00</li>
+                </ul>
+                <div class="bulk-total">
+                    Total Order Value: <span id="bulk-total-value">₹ 17,500.00</span>
+                </div>
+                <button class="btn btn-primary" style="margin-top: 20px;">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+    
+    <script src="features_script.js"></script>
+      <a  href="index.html" target="_self" class="version">Back to Home </a>
+
+    <script  src="./script.js"></script>
+</body>
+</html>

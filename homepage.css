@@ -1,0 +1,272 @@
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+}
+
+body {
+    background-color: #707d88;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- 1. Header Styles --- */
+.main-header {
+    background-color: #445665;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.logo-text {
+    font-size: 1.2em;
+    color: #080808;
+}
+
+.logo-odia {
+    font-size: 0.7em;
+    color: #fff9f9;
+}
+
+.search-bar {
+    display: flex;
+    width: 40%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #f69218; /* Use a complementary color for action */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e67e00;
+}
+
+.language-selector .lang-text {
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #f8efef;
+}
+
+.language-selector .active {
+    font-weight: bold;
+    color: #e0d8d8;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eee;
+}
+
+.nav-link {
+    padding: 10px 20px;
+    color: #ffffff;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #00A5B7;
+    border-bottom: 2px solid #00A5B7;
+}
+
+/* --- 2. Hero Section Styles --- */
+.hero-section {
+    background: url('placeholder-market-bg.jpg') center/cover no-repeat; /* Replace with your image */
+    background-color: #333; 
+    color: white;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 5%;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay for text readability */
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* --- 3. Key Features Grid Styles --- */
+.features-grid-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 5%;
+    margin-top: -50px; /* Pulls the grid slightly over the hero section */
+    position: relative;
+    z-index: 10;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 23%;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 10px;
+    color: #00A5B7; /* Feature color */
+}
+
+.feature-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.feature-card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- 4. Dynamic Content Area Styles --- */
+.dynamic-content-area {
+    padding: 40px 5%;
+}
+
+.dynamic-content-area h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.product-grid-placeholder {
+    /* To show the area where products will go */
+    border: 2px dashed #ddd;
+    padding: 50px;
+    text-align: center;
+    color: #888;
+}
+
+/* --- 5. Footer Styles --- */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    margin-right: 20px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #00A5B7;
+}
+
+.social-media a {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-bar {
+        width: 100%;
+        order: 3;
+    }
+    .user-actions {
+        order: 2;
+    }
+    .logo {
+        order: 1;
+    }
+    .features-grid-container {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 0 5%;
+    }
+    .feature-card {
+        width: 100%;
+    }
+    .hero-title {
+        font-size: 1.8em;
+    }
+}

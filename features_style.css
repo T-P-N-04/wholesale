@@ -1,0 +1,256 @@
+/* =========================================================================
+   1. BASE STYLES & GLOBAL LAYOUT (Source: Homstyle.css)
+   ========================================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    /* Corrected light background for contrast */
+    background-color: #f8f8f8; 
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header Styles (Reused from previous steps) --- */
+.main-header {
+    background-color: #b2aecd; 
+    box-shadow: 0 2px 4px rgba(145, 141, 141, 0.1);
+    margin-bottom: 20px;
+}
+
+.main-header h1 {
+    color: #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.nav-link {
+    padding: 10px 20px;
+    color: #555;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 2px solid transparent; 
+}
+
+.nav-link:hover {
+    color: #00A5B7;
+    border-bottom: 2px solid #00A5B7;
+}
+
+.btn-primary {
+    background-color: #FF8C00;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+/* =========================================================================
+   2. FEATURE PAGE STYLES (Source: features_style.css)
+   ========================================================================= */
+/* Container for all feature pages */
+.feature-page-container {
+    padding: 40px 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px; /* Space between features */
+}
+
+.feature-card h2 {
+    color: #00A5B7;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.feature-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* --- A. Digital Ledger (Khaata) Styles --- */
+.ledger-balance {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #00A5B7;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* JS will set color on balance based on debit/credit */
+.ledger-balance #current-balance.debit {
+    color: #C0392B; /* Red for Buyer Owes */
+}
+.ledger-balance #current-balance.credit {
+    color: #27AE60; /* Green for Payment Due */
+}
+
+
+.ledger-input-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.ledger-input-form input, .ledger-input-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+.ledger-input-form button {
+    background-color: #636cad; /* Orange for Action */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ledger-table th, .ledger-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.ledger-table th {
+    background-color: #f5f5f5;
+}
+
+.debit {
+    color: #C0392B; 
+    font-weight: bold;
+}
+.credit {
+    color: #27AE60; 
+    font-weight: bold;
+}
+
+/* --- B. Bulk Order Styles --- */
+.bulk-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.bulk-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.bulk-form button {
+    background-color: #00A5B7; /* Teal for Action */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#bulk-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+}
+#bulk-list li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #eee;
+    font-size: 0.9em;
+}
+
+.bulk-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 2px dashed #ddd;
+}
+
+/* --- C. Hyper-local Delivery Styles --- */
+.delivery-slots select, .pin-code-check input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.delivery-slots label, .pin-code-check label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.delivery-map-placeholder {
+    height: 150px;
+    background-color: #f0f0ff;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 150px;
+    color: #6a6a6a;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* =========================================================================
+   3. RESPONSIVE DESIGN
+   ========================================================================= */
+@media (max-width: 900px) {
+    .ledger-input-form {
+        flex-direction: column;
+    }
+    .ledger-input-form input, .ledger-input-form select, .ledger-input-form button {
+        width: 100%;
+    }
+}
+.version {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  border-radius: 40px;
+  background: #636cad;
+  color: #000000;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.8em 2em;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+}

@@ -1,0 +1,246 @@
+/* --- Dashboard Container Layout --- */
+.dashboard-container {
+    /* CRITICAL: Enables the two-column layout */
+    display: flex; 
+    gap: 25px; 
+    padding: 30px 5%; 
+    max-width: 1400px; 
+    margin: 20px auto; 
+}
+
+/* --- Left Panel: Seller Profile & Quick Actions --- */
+.seller-profile-panel {
+    /* White background is visible against the light body color */
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    width: 30%; 
+    min-width: 280px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.seller-profile-panel h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.seller-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.seller-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00A5B7;
+}
+
+.seller-details .seller-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+}
+
+.seller-details .seller-business {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.seller-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-upload, .btn-view {
+    display: block; 
+    padding: 12px 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-upload {
+    background-color: #FF8C00; 
+    color: white;
+}
+
+.btn-upload:hover {
+    background-color: #e67e00;
+}
+
+.btn-view {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.btn-view:hover {
+    background-color: #45a049;
+}
+
+.local-insights h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.insight-placeholder {
+    background-color: #f9f9f9;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+}
+
+.insight-placeholder .chart-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* --- Right Panel: Pending Orders --- */
+.pending-orders-panel {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    flex-grow: 1; 
+}
+
+.pending-orders-panel h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.orders-table-wrapper {
+    overflow-x: auto; 
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.orders-table thead th {
+    background-color: #f0f0f0;
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+    color: #555;
+}
+
+.orders-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top; 
+}
+
+.orders-table tbody tr:last-child td {
+    border-bottom: none; 
+}
+
+.orders-table tbody tr:hover {
+    background-color: #f5f5f5; 
+}
+
+.order-row.order-pending {
+    background-color: #fffde7; 
+}
+
+.no-orders {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    font-style: italic;
+}
+
+.btn-action-confirm {
+    background-color: #00A5B7; 
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+    white-space: nowrap; 
+}
+
+.btn-action-confirm:hover {
+    background-color: #008f9f;
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 5px; 
+    white-space: nowrap;
+}
+
+.status-confirmed { background-color: #4CAF50; } 
+.status-delivered { background-color: #2196F3; } 
+.status-khaata { background-color: #FFC107; color: #333; } 
+.status-other { background-color: #9E9E9E; } 
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .dashboard-container {
+        flex-direction: column; 
+    }
+    .seller-profile-panel {
+        width: 100%; 
+        min-width: unset;
+    }
+    .pending-orders-panel {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .orders-table thead {
+        display: none; 
+    }
+    .orders-table tbody tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .orders-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 15px;
+        border-bottom: 1px dashed #eee;
+    }
+    .orders-table tbody td:before {
+        content: attr(data-label); 
+        font-weight: bold;
+        color: #555;
+    }
+    .orders-table tbody td:last-child {
+        border-bottom: none;
+    }
+}

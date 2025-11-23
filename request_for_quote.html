@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request for Quote (RFQ) - Bhubaneswar Connect</title>
+    <link rel="stylesheet" href="Homstyle.css"> 
+    <link rel="stylesheet" href="features_style.css"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <h1 style="padding: 15px; text-align: center;">💬 Request for Quote (RFQ)</h1>
+    </header>
+
+    <main class="feature-page-container">
+        
+        <section class="feature-card">
+            <h2>Private Negotiation for Bulk Orders</h2>
+            <p>If your required order quantity exceeds 5,000 units or ₹5,00,000 in value, please submit a Request for Quote (RFQ) below. A local wholesale partner will contact you directly with a personalized price offer.</p>
+            
+          <form class="rfq-form">
+    <div class="form-group">
+        <label for="buyerName">Your Business Name:</label>
+        <input type="text" id="buyerName" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="productDesc">Product and Volume Needed:</label>
+        <textarea id="productDesc" rows="5" required></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="targetPrice">Target Price per Unit:</label>
+        <input type="number" required id="targetPrice" placeholder="₹">
+    </div>
+    
+    <div class="form-group">
+        <label for="contactEmail">Contact Email:</label>
+        <input type="email" id="contactEmail" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary rfq-submit-btn">Submit RFQ</button>
+</form>
+        </section>
+    </main>
+     <a  href="index.html" target="_self" class="version">Back to Home </a>
+
+    <script  src="./script.js"></script>
+</body>
+</html>
